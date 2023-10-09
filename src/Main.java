@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         // create state machine, set max consecutive count
         ConsecutiveSequenceStateMachine<Character> stateMachine
-                = new ConsecutiveSequenceStateMachine<>(3);
+                = new ConsecutiveSequenceStateMachine<>(2);
 
         // first input
         char[] inputSequence

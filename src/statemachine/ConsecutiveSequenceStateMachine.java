@@ -53,7 +53,7 @@ public class ConsecutiveSequenceStateMachine<T> {
         State state = countAndState._state;
         _consecutiveCounts.put(input, new CountAndState(count, state));
 
-        if (count >= _maxConsecutiveCount && state != State.ERROR) {
+        if (count > _maxConsecutiveCount && state != State.ERROR) {
             System.out.println("Error: Consecutive element (" + input.toString() + ") detected.");
             _consecutiveCounts.put(input, new CountAndState(0, State.ERROR));
         }
