@@ -47,6 +47,11 @@ public class ConsecutiveSequenceStateMachine<T> {
         _maxConsecutiveCount = maxConsecutiveCount;
     }
 
+    public ConsecutiveSequenceStateMachine(ConsecutiveSequenceStateMachine<T> other) {
+        _maxConsecutiveCount = other._maxConsecutiveCount;
+        _consecutiveCounts = other._consecutiveCounts;
+    }
+
     public void processInput(T input) {
         CountAndState countAndState = _consecutiveCounts.getOrDefault(input, new CountAndState());
         int count = countAndState._counter + 1;

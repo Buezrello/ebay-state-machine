@@ -9,9 +9,11 @@ public class InMemoryStateRepository<T> implements StateRepository<T> {
 
     @Override
     public void saveState(ConsecutiveSequenceStateMachine<T> stateMachine) {
-        savedState = new ConsecutiveSequenceStateMachine<>(stateMachine.get_maxConsecutiveCount());
-        savedState.set_consecutiveCounts(stateMachine.get_consecutiveCounts());
-        savedState.set_maxConsecutiveCount(stateMachine.get_maxConsecutiveCount());
+//        savedState = new ConsecutiveSequenceStateMachine<>(stateMachine.get_maxConsecutiveCount());
+//        savedState.set_consecutiveCounts(stateMachine.get_consecutiveCounts());
+//        savedState.set_maxConsecutiveCount(stateMachine.get_maxConsecutiveCount());
+
+        savedState = new ConsecutiveSequenceStateMachine<>(stateMachine);
     }
 
     @Override
